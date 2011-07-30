@@ -1,0 +1,11 @@
+daily.ford<-read.csv("C:/Documents and Settings/SCA222.CAS.000/Desktop/DailyFord.csv",
+dec=".",sep=",",header=T)
+attach(daily.ford)
+y<-ts(Open,start=1,freq=1)
+x<-ts(Close,start=1,freq=1)
+plot(y,main="Daily Opening and Closing Price",xlab="Day",ylab="Volume",ylim=c(1,30),col=1)
+par(new=T)
+plot(x,main="",xlab="",ylab="",ylim=c(1,30),col=2)
+legend(1000,25,c("x01","x02"),fill=1:2,cex=.8)
+--------------------------------------------------------------------------------------------
+a<-ts(
